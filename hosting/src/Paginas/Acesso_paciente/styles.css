@@ -1,0 +1,62 @@
+.dados-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .pacienteImg {
+  margin-top: 250px;
+  width: 300px;
+  padding-left: 100px;
+}
+
+header span {
+  font-size: 1.5em;
+}
+
+button {
+  padding: 10px;
+  width: 120px;
+  border-radius: 10px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ff1a1a;
+}
+
+section {
+  margin-top: 20px;
+}
+
+section h3 {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 5px 0;
+}

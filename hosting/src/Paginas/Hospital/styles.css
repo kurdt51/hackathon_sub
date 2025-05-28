@@ -1,0 +1,50 @@
+.container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logoImg {
+  margin-top: 250px;
+  width: 300px;
+  padding-left: 50px;
+}
+
+header span {
+  font-size: 1.2em;
+}
+
+button {
+  padding: 10px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ff1a1a;
+}
+
+section {
+  margin-top: 20px;
+}
+
+section h3 {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 5px 0;
+}
