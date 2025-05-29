@@ -5,13 +5,13 @@ import { getStorage } from "firebase/storage";
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAmtydjbKruZ0Ao5vauDQtkQw2mBLjSGiI",
-  authDomain: "hackathon-substitutiva.firebaseapp.com",
-  projectId: "hackathon-substitutiva",
-  storageBucket: "hackathon-substitutiva.firebasestorage.app",
-  messagingSenderId: "193490713115",
-  appId: "1:193490713115:web:67e67f068efd70cd8456be",
-  measurementId: "G-RSVYH7XM1S"
+  apiKey: "",
+  authDomain: "",
+  projectId: "h",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: "",
+  measurementId: ""
 };
 
 // Initialize Firebase

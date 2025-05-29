@@ -33,3 +33,4 @@ Para iniciar o projeto é necessário primeiro executar o servidor, na pasta ser
 
 Quando exibir a mensagem de que o servidor está rodando você retorna para a pasta src, abre o terminal e executa o comando npm run dev
 
+Atualizado.
