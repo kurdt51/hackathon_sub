@@ -1,4 +1,84 @@
 
+Para importar o projeto do Git hub primeiro é necessário garantir ele está instalado
+No VS Code abre o terminal, acess uma e digite git --version, senão reconhecer o comando é necessário instalar o Git hub
+Acesse o link e realize a instalação https://git-scm.com/downloads/win
+Após a instalação digite novamente o comando git --version, se a instalação foi realizada com sucesso então ele exibirá a versão do Git hub
+
+Importando o projeto do Github
+No seu computador selecione uma pasta onde clonar o projeto, de preferência crie uma nova pasta
+Dentro da pasta clique com o botão direito do mouse e selecione a opção Open Git Bash here e digite o comando abaixo
+git clone https://github.com/kurdt51/hackathon_sub.git
+Se você já está mais familiarizado com os comandos pode executar este processo direto pelo VS Code.
+
+O comando git clone irá copiar o projeto do Git hub para a pasta, feito isso acesso o VS code para configurar o projeto, instalar as dependências e executar o projeto.
+
+Para configurar o projeto é necessário criar um novo projeto no Firebase
+
+Após configurar seu projeto no Firebase você já tem os dados para inserir no firebaseConfig.js
+
+Para encontrar essas informações no Firebase você pode acessar o menu de Configurações -> Configurações do projeto e na aba Geral você terá as configurações para inserir como o exemplo abaixo
+
+Configurando o Firebase no projeto
+
+1 – hosting -> src -> services -> firebaseConfig.js
+Inserir as informações abaixo
+  apiKey: "",
+  authDomain: "",
+  databaseURL: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: "",
+  measurementId: ""
+
+Salve a configuração
+
+Para configurar o SDK siga os passos abaixo
+Configurações -> Configurações do projeto
+Acesse a aba Contas de serviço
+Clique na opção Gerar nova chave privada
+
+Selecione a pasta onde você salvou o projeto, dentro da estrutura
+hackathon_sub\hosting\src\services
+
+Após salvar a chave gerada volte para o VS Code e acesse
+hosting -> src -> services
+aqui a sua nova chave já deve estar visível, agora é necessário configurar ela no projeto
+
+Dentro do hosting -> src -> services abra o arquivo firebaseAdmin.js
+Copie o nome arquivo com a sua extensão e cole no caminho dentro das ‘’
+const serviceAccount = JSON.parse(
+  await readFile(new URL(‘’, import.meta.url))
+);
+
+Para instalar as dependências vá na pasta hosting, abra um novo terminal e digite o comando
+npm install
+o comando irá ler o arquivo package.json e instalar todas as dependências
+
+Após instalar as dependências necessárias já podemos iniciar o projeto
+Primeiro precisamos iniciar o servidor, para isso vá para a pasta services e abra um novo terminal nela
+Digite o comando node server.js
+Se tudo funcionou corretamente será exibida a mensagem “Servidor rodando na porta 3001”
+Segundo passo é retornar para a pasta src, abrir outro terminal e digitar o comando
+npm run dev
+Se tudo foi instalado corretamente será exibido o link para acesso local da aplicação web, algo como http://localhost:5173/
+
+Na tela inicial você criar um novo cadastro ou utilizar os usuários fornecidos abaixo:
+
+Médico
+medicoteste@teste.com
+Teste@123
+
+Paciente
+testepaciente@teste.com
+Teste@123
+
+Usuário Admin para realizar o cadastro de hospitais
+admin@healthtrack.com
+Admin@2025
+
+Para poder testar o link “Esqueceu sua senha?” é necessário cadastrar um usuário com um e-mail válido para que você possa receber o link.
+
 
 Funcionalidades
 
@@ -28,9 +108,4 @@ Dependências
     "react-toastify": "^11.0.5",
     "sweetalert": "^2.1.2",
     "sweetalert2": "^11.21.2"
-    
-Para iniciar o projeto é necessário primeiro executar o servidor, na pasta services você precisa abrir um terminal no server.js e executar o comando node server.js
-
-Quando exibir a mensagem de que o servidor está rodando você retorna para a pasta src, abre o terminal e executa o comando npm run dev
-
-Atualizado.
+  
